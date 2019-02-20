@@ -1,25 +1,81 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import uuid from 'uuid'
 import './App.css';
 
+import List from './List'
+
 class App extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      lists: [{
+        id: uuid.v4(),
+        listName: 'Phone Features',
+        cards:
+          [{
+            id: uuid.v4(),
+            cardName: 'Subwoofer'
+            },
+            {
+            id: uuid.v4(),
+            cardName: 'Non porus, washable'
+            },
+            {
+            id: uuid.v4(),
+            cardName: 'Wings'
+            },
+            {
+            id: uuid.v4(),
+            cardName: 'Beveled Bezel'
+            },
+            {
+            id: uuid.v4(),
+            cardName: 'Beveled Bezel'
+            },
+            {
+            id: uuid.v4(),
+            cardName: 'Seedless'
+            }]
+      },
+      {
+        id: uuid.v4(),
+        listName: 'Phone Features',
+        cards:
+          [{
+            id: uuid.v4(),
+            cardName: 'Subwoofer'
+            },
+            {
+            id: uuid.v4(),
+            cardName: 'Non porus, washable'
+            },
+            {
+            id: uuid.v4(),
+            cardName: 'Wings'
+            },
+            {
+            id: uuid.v4(),
+            cardName: 'Beveled Bezel'
+            },
+            {
+            id: uuid.v4(),
+            cardName: 'Beveled Bezel'
+            },
+            {
+            id: uuid.v4(),
+            cardName: 'Seedless'
+            }]
+      }
+    ]}
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="trelloContainer">
+        {this.state.lists.map(list =>
+          <List list={list} key={list.id}/>
+        )}
       </div>
     );
   }

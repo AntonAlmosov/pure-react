@@ -1,33 +1,52 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.trelloContainer{
   display: flex;
-  flex-direction: column;
+}
+
+.listWrapper{
+  width: 300px;
+  background-color: #E2E4E6;
+  padding: 10px;
+  margin: 50px;
+  border-radius: 3px;
+}
+
+.listTittle{
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.listTittle span{
+  font-weight: 700;
+  font-size: 16px;
+  color: rgba(0,0,0,0.7)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.moreButton{
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0,0,0,0.23)
+}
+
+.card{
+  margin: 8px auto;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 7px 7px 7px 7px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.addCard{
+  margin-top: 10px;
+}
+.addCard input{
+  background-color: rgba(0,0,0,0);
+  border: 0;
+  font-size: 16px;
+  outline: none;
 }
